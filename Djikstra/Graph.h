@@ -1,10 +1,11 @@
-//Graph needs to have adjacency matrix
+
 #include <vector>
 #include <iostream>
 #include <iomanip>
 
 using namespace std;
 
+//Base template of Graph using Adjacency Matrix
 class Graph {
     private:
         int numVertices; 
@@ -47,6 +48,8 @@ class Graph {
 
         void makeEdge(int idxA, int idxB, int weight) { //create an edge in O(1) constant time since this is just array indexing
             weightedAdjMatrix[idxA][idxB] = weight; //Edge from A to B is assigned weight != INFINITY
-            weightedAdjMatrix[idxB][idxA] = weight; //also is bidirectional
+            weightedAdjMatrix[idxB][idxA] = weight;
         }
+
+        
 };
